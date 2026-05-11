@@ -15,6 +15,8 @@ xcuserdata/
 .DS_Store
 
 # Secrets — fastlane scripts symlink this to iCloud Drive
+# Match BOTH the directory form and the symlink form (no trailing slash).
+fastlane/secrets
 fastlane/secrets/
 *.p8
 private_keys/
