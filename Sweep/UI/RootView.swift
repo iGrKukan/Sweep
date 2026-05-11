@@ -1,6 +1,26 @@
 import SwiftUI
 
 struct RootView: View {
+    @Environment(PhotoAuthorization.self) private var auth
+    @Environment(\.scenePhase) private var scenePhase
+
+    var body: some View {
+        Group {
+            switch auth.status {
+            case .authorized, .limited:
+                MainTabView()
+            case .notDetermined, .denied, .restricted:
+                PermissionGateView()
+            }
+        }
+        .animation(.default, value: auth.status)
+        .onChange(of: scenePhase) { _, new in
+            if new == .active { auth.refresh() }
+        }
+    }
+}
+
+struct MainTabView: View {
     var body: some View {
         TabView {
             PlaceholderTab(title: "Duplicates", icon: "square.on.square")

@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		02D45EFD662BD4D25C794AAE /* SweepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30247CC2233E72FE0E3FEE37 /* SweepUITests.swift */; };
 		11A1DC09E70531A7D161D444 /* SweepApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEF9C38B049ADC1827D17B6 /* SweepApp.swift */; };
+		4753F3409C2ABE40FBB3FE36 /* PhotoAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56B6F1A85349A28085CCD2A /* PhotoAuthorization.swift */; };
 		A57DFD5E00FABEE2E02EBE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8BAE7C093E119AEEF1848C /* Assets.xcassets */; };
+		AD2F62FD0019E95C564EB30C /* PermissionGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F737A3B92A9830FDCA2B9A /* PermissionGateView.swift */; };
 		EF49188EA31D2C1D5BC69AB2 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44A142C24F11DC0B2A58549 /* RootView.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +31,9 @@
 		4BEF9C38B049ADC1827D17B6 /* SweepApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweepApp.swift; sourceTree = "<group>"; };
 		6A6914B6C0FBC52CA114F2CD /* SweepUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SweepUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D8BAE7C093E119AEEF1848C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96F737A3B92A9830FDCA2B9A /* PermissionGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionGateView.swift; sourceTree = "<group>"; };
 		C44A142C24F11DC0B2A58549 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		D56B6F1A85349A28085CCD2A /* PhotoAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAuthorization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -40,6 +44,14 @@
 				829EEAA117D1BB02677D2B38 /* SweepUITests */,
 				998FD1C8BAF561312301DCA7 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		75615D622B6113B1DB99A8EA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D56B6F1A85349A28085CCD2A /* PhotoAuthorization.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		7FBBC823C723CFD49B631284 /* App */ = {
@@ -70,6 +82,7 @@
 		A8C5B06BE5D2C0FE4142D52B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				96F737A3B92A9830FDCA2B9A /* PermissionGateView.swift */,
 				C44A142C24F11DC0B2A58549 /* RootView.swift */,
 			);
 			path = UI;
@@ -87,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				7FBBC823C723CFD49B631284 /* App */,
+				75615D622B6113B1DB99A8EA /* Core */,
 				C593AF2CF443C93B8608BEEF /* Resources */,
 				A8C5B06BE5D2C0FE4142D52B /* UI */,
 			);
@@ -194,6 +208,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD2F62FD0019E95C564EB30C /* PermissionGateView.swift in Sources */,
+				4753F3409C2ABE40FBB3FE36 /* PhotoAuthorization.swift in Sources */,
 				EF49188EA31D2C1D5BC69AB2 /* RootView.swift in Sources */,
 				11A1DC09E70531A7D161D444 /* SweepApp.swift in Sources */,
 			);
