@@ -2,13 +2,14 @@ import SwiftUI
 
 struct RootView: View {
     @Environment(PhotoAuthorization.self) private var auth
+    @Environment(ScanCoordinator.self) private var scan
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
         Group {
             switch auth.status {
             case .authorized, .limited:
-                MainTabView()
+                scanFlow
             case .notDetermined, .denied, .restricted:
                 PermissionGateView()
             }
@@ -18,31 +19,20 @@ struct RootView: View {
             if new == .active { auth.refresh() }
         }
     }
-}
 
-struct MainTabView: View {
-    var body: some View {
-        TabView {
-            PlaceholderTab(title: "Duplicates", icon: "square.on.square")
-            PlaceholderTab(title: "Screenshots", icon: "camera.viewfinder")
-            PlaceholderTab(title: "Blurry", icon: "drop.fill")
-            PlaceholderTab(title: "Large", icon: "arrow.up.right.and.arrow.down.left.rectangle")
-            PlaceholderTab(title: "Settings", icon: "gearshape")
+    @ViewBuilder
+    private var scanFlow: some View {
+        switch scan.state {
+        case .idle:
+            ScanProgressView(progress: 0, stage: "Preparing…")
+                .onAppear { scan.start() }
+        case let .scanning(progress, stage):
+            ScanProgressView(progress: progress, stage: stage)
+        case let .complete(report):
+            HomeView(report: report) { scan.start() }
+        case let .failed(message):
+            ContentUnavailableView("Scan failed", systemImage: "exclamationmark.triangle", description: Text(message))
         }
     }
 }
 
-private struct PlaceholderTab: View {
-    let title: LocalizedStringKey
-    let icon: String
-
-    var body: some View {
-        NavigationStack {
-            ContentUnavailableView(title, systemImage: icon, description: Text("Coming in v1.0"))
-                .navigationTitle(title)
-        }
-        .tabItem { Label(title, systemImage: icon) }
-    }
-}
-
-#Preview { RootView() }
