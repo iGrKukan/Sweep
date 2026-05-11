@@ -18,7 +18,10 @@ final class ThumbnailLoader: @unchecked Sendable {
     private let manager = PHCachingImageManager()
     private let options: PHImageRequestOptions = {
         let o = PHImageRequestOptions()
-        o.deliveryMode = .opportunistic
+        // `.opportunistic` fires the callback twice (placeholder, then final),
+        // and CheckedContinuation traps on a second resume. `.fastFormat`
+        // guarantees a single callback with a thumbnail-quality result.
+        o.deliveryMode = .fastFormat
         o.resizeMode = .fast
         o.isNetworkAccessAllowed = true
         return o
