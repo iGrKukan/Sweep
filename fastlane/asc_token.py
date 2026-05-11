@@ -15,6 +15,7 @@ ISSUER_ID = "69a6de8e-0e6d-47e3-e053-5b8c7c11a4d1"
 KEY_PATH = SECRETS / f"AuthKey_{KEY_ID}.p8"
 TEAM_ID = "U5BAN54DL2"
 BUNDLE_ID = "by.timberbid.sweep"
+APP_ID = "6768282645"  # Pixelbroom in App Store Connect
 
 
 def make_token(ttl_seconds: int = 1200) -> str:
