@@ -3,12 +3,18 @@ import SwiftUI
 import UIKit
 
 /// Loads PHAsset thumbnails by `localIdentifier`, with an in-memory NSCache.
-/// Loads happen on a serial background queue so SwiftUI rows scroll without jank.
-@MainActor
-final class ThumbnailLoader {
+///
+/// NSCache and PHCachingImageManager are both thread-safe, so the loader
+/// itself is `Sendable` (not MainActor-isolated). This avoids actor hops
+/// inside the request callback that PHImageManager invokes off the main thread.
+final class ThumbnailLoader: @unchecked Sendable {
     static let shared = ThumbnailLoader()
 
-    private let cache = NSCache<NSString, UIImage>()
+    private let cache: NSCache<NSString, UIImage> = {
+        let c = NSCache<NSString, UIImage>()
+        c.countLimit = 800
+        return c
+    }()
     private let manager = PHCachingImageManager()
     private let options: PHImageRequestOptions = {
         let o = PHImageRequestOptions()
@@ -18,9 +24,7 @@ final class ThumbnailLoader {
         return o
     }()
 
-    private init() {
-        cache.countLimit = 800
-    }
+    private init() {}
 
     func image(for id: String, targetSize: CGSize) async -> UIImage? {
         let key = "\(id)|\(Int(targetSize.width))x\(Int(targetSize.height))" as NSString
@@ -46,6 +50,7 @@ struct AssetThumbnail: View {
     let id: String
     var side: CGFloat = 96
 
+    @Environment(\.displayScale) private var displayScale
     @State private var image: UIImage?
 
     var body: some View {
@@ -62,8 +67,7 @@ struct AssetThumbnail: View {
         .frame(width: side, height: side)
         .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
         .task(id: id) {
-            let scale = await UIScreen.main.scale
-            let pixelSide = side * scale
+            let pixelSide = side * displayScale
             image = await ThumbnailLoader.shared.image(
                 for: id,
                 targetSize: CGSize(width: pixelSide, height: pixelSide)

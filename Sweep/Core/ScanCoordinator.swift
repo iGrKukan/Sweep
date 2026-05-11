@@ -69,7 +69,7 @@ final class ScanCoordinator {
 
         await setStage("Computing file sizes…", progress: 0.1)
         let summaries: [PhotoSummary] = assets.map { PhotoSummary($0, fileSize: Self.estimateSize($0)) }
-        let summaryByID = Dictionary(uniqueKeysWithValues: summaries.map { ($0.id, $0) })
+        let summaryByID = Dictionary(summaries.map { ($0.id, $0) }, uniquingKeysWith: { first, _ in first })
 
         // 1. Screenshots
         let screenshots = summaries.filter { $0.isScreenshot }
