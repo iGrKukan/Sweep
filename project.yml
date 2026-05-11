@@ -34,7 +34,7 @@ targets:
     info:
       path: Sweep/Info.plist
       properties:
-        CFBundleDisplayName: Sweep
+        CFBundleDisplayName: Pixelbroom
         CFBundleShortVersionString: "1.0.0"
         CFBundleVersion: "1"
         UILaunchScreen:
