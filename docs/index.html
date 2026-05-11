@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sweep — Privacy-first photo cleaner for iPhone</title>
+  <style>
+    :root { --bg:#0c0d12; --fg:#f6f3f0; --muted:#8a8590; --accent:#e76b2f; --border:rgba(255,255,255,.08); }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
+    .wrap{max-width:720px;margin:0 auto;padding:48px 24px 80px;text-align:center;}
+    h1{font-size:48px;letter-spacing:-.02em;margin:0 0 16px;}
+    .tag{color:var(--muted);font-size:18px;margin-bottom:36px;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;text-align:left;margin-top:40px;}
+    .card{border:1px solid var(--border);border-radius:12px;padding:18px;}
+    .card h3{margin:0 0 6px;font-size:16px;}
+    .card p{margin:0;color:var(--muted);font-size:14px;}
+    .links{margin-top:48px;}
+    .links a{color:var(--accent);margin:0 12px;text-decoration:none;}
+    .links a:hover{text-decoration:underline;}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Sweep</h1>
+  <p class="tag">Free up storage on your iPhone — find duplicates, blurry shots and old screenshots. Nothing leaves your device.</p>
+
+  <div class="grid">
+    <div class="card"><h3>Duplicates</h3><p>Perceptual hashing groups exact and near-duplicate photos locally.</p></div>
+    <div class="card"><h3>Screenshots</h3><p>Surfaces the old screenshots that have been silently filling your library.</p></div>
+    <div class="card"><h3>Blurry shots</h3><p>Variance-of-Laplacian sharpness check on a 128×128 grayscale thumbnail.</p></div>
+    <div class="card"><h3>Bursts</h3><p>Groups photos taken within 2 seconds — pick the keeper, delete the rest.</p></div>
+    <div class="card"><h3>Large items</h3><p>Top-100 biggest videos and Live Photos, sorted by estimated size.</p></div>
+    <div class="card"><h3>No upload</h3><p>Every byte of analysis runs on your iPhone. We never see your photos.</p></div>
+  </div>
+
+  <div class="links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="mailto:timbelwood@gmail.com">Support</a>
+    <a href="https://github.com/iGrKukan/Sweep">GitHub</a>
+  </div>
+</div>
+</body>
+</html>
