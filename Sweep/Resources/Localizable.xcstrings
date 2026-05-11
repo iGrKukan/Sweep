@@ -1,0 +1,375 @@
+{
+  "sourceLanguage" : "en",
+  "version" : "1.0",
+  "strings" : {
+    "%lld items" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "%lld Elemente" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "%lld items" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "%lld éléments" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%lld 件" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "%lld шт." } }
+      }
+    },
+    "About" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Über" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "About" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "À propos" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "アプリについて" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "О приложении" } }
+      }
+    },
+    "All scanning happens on your iPhone — nothing is uploaded." : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Die gesamte Analyse läuft auf deinem iPhone — nichts wird hochgeladen." } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "All scanning happens on your iPhone — nothing is uploaded." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Toute l’analyse a lieu sur ton iPhone — rien n’est envoyé en ligne." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "解析はすべて iPhone 上で実行され、何もアップロードされません。" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Всё сканирование происходит на твоём iPhone — ничего не отправляется наружу." } }
+      }
+    },
+    "Blurry" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Unscharf" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Blurry" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Flou" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "ぼけた写真" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Размытые" } }
+      }
+    },
+    "Burst" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Serie" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Burst" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Rafale" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "バースト" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Серия" } }
+      }
+    },
+    "Bursts" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Serienaufnahmen" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Bursts" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Rafales" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "バースト" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Серии" } }
+      }
+    },
+    "Coming in v1.0" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Kommt in v1.0" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Coming in v1.0" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "À venir dans v1.0" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "v1.0 で実装予定" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Появится в v1.0" } }
+      }
+    },
+    "Coming soon: unlock unlimited deletion + smart suggestions for $9.99 (one-time)." : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Bald: unbegrenztes Löschen + smarte Vorschläge für 9,99 $ (einmalig)." } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Coming soon: unlock unlimited deletion + smart suggestions for $9.99 (one-time)." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Bientôt : suppression illimitée + suggestions intelligentes pour 9,99 $ (achat unique)." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "近日公開：無制限の削除 + スマート提案を $9.99（買い切り）でアンロック。" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Скоро: безлимит удаления + умные подсказки за $9.99 (разово)." } }
+      }
+    },
+    "Contact the device administrator to lift the restriction." : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Wende dich an die Geräteverwaltung, um die Einschränkung aufzuheben." } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Contact the device administrator to lift the restriction." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Contacte l’administrateur de l’appareil pour lever la restriction." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "制限を解除するには端末の管理者に連絡してください。" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Чтобы снять ограничение, обратись к администратору устройства." } }
+      }
+    },
+    "Continue" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Weiter" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Continue" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Continuer" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "続ける" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Продолжить" } }
+      }
+    },
+    "Couldn't delete" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Konnte nicht gelöscht werden" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Couldn't delete" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Suppression impossible" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "削除できませんでした" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Не удалось удалить" } }
+      }
+    },
+    "Delete" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Löschen" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Delete" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Supprimer" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "削除" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалить" } }
+      }
+    },
+    "Deselect all" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Alle abwählen" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Deselect all" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Tout désélectionner" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "すべて解除" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Снять выбор" } }
+      }
+    },
+    "Done" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Fertig" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Done" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Terminé" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "完了" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Готово" } }
+      }
+    },
+    "Duplicates" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Duplikate" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Duplicates" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Doublons" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "重複" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Дубликаты" } }
+      }
+    },
+    "Exact match" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Exakt gleich" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Exact match" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Identique" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "完全一致" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Точное совпадение" } }
+      }
+    },
+    "Full access lets us see duplicates across your entire library, not just a subset." : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Mit vollem Zugriff sehen wir Duplikate in deiner gesamten Mediathek, nicht nur in einem Ausschnitt." } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Full access lets us see duplicates across your entire library, not just a subset." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "L’accès complet permet de voir les doublons dans toute ta photothèque, pas juste une sélection." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "フルアクセスにすると、ライブラリ全体の重複を検出できます。" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Полный доступ позволяет искать дубли по всей библиотеке, а не по выборке." } }
+      }
+    },
+    "Grant access so Sweep can find duplicates, blurry shots and old screenshots." : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Gewähre Zugriff, damit Sweep Duplikate, unscharfe Fotos und alte Screenshots finden kann." } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Grant access so Sweep can find duplicates, blurry shots and old screenshots." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Autorise l’accès pour que Sweep puisse trouver doublons, flous et anciens screenshots." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "アクセスを許可すると、重複・ぼけ・古いスクリーンショットを検出できます。" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Разреши доступ, чтобы Sweep нашёл дубли, размытые кадры и старые скриншоты." } }
+      }
+    },
+    "Large items" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Große Dateien" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Large items" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Volumineux" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "サイズが大きい" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Тяжёлые" } }
+      }
+    },
+    "Nothing found" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Nichts gefunden" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Nothing found" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Rien trouvé" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "見つかりませんでした" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Ничего не найдено" } }
+      }
+    },
+    "OK" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "OK" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "OK" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "OK" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "OK" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "ОК" } }
+      }
+    },
+    "Open Settings" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Einstellungen öffnen" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Open Settings" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Ouvrir Réglages" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "設定を開く" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Открыть настройки" } }
+      }
+    },
+    "Photo access is currently disabled. Open Settings → Sweep → Photos to enable it." : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Fotozugriff ist aktuell deaktiviert. Aktiviere ihn unter Einstellungen → Sweep → Fotos." } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Photo access is currently disabled. Open Settings → Sweep → Photos to enable it." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "L’accès aux photos est désactivé. Ouvre Réglages → Sweep → Photos pour l’activer." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "写真へのアクセスが無効です。設定 → Sweep → 写真 から有効にしてください。" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Доступ к фото сейчас выключен. Включи его в Настройки → Sweep → Фото." } }
+      }
+    },
+    "Photo access is restricted on this device (Screen Time or a profile blocks it)." : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Der Fotozugriff ist auf diesem Gerät eingeschränkt (Bildschirmzeit oder ein Profil blockiert ihn)." } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Photo access is restricted on this device (Screen Time or a profile blocks it)." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "L’accès aux photos est restreint sur cet appareil (Temps d’écran ou un profil le bloque)." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "この端末では写真へのアクセスが制限されています（スクリーンタイムまたは構成プロファイルによる制限）。" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Доступ к фото ограничен на этом устройстве (Экранное время или профиль)." } }
+      }
+    },
+    "Potential recovery" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Mögliche Freigabe" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Potential recovery" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Récupération potentielle" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "回復可能な容量" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Можно освободить" } }
+      }
+    },
+    "Preparing…" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Wird vorbereitet…" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Preparing…" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Préparation…" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "準備中…" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Подготовка…" } }
+      }
+    },
+    "Privacy Policy" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Datenschutzerklärung" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Privacy Policy" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Politique de confidentialité" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "プライバシーポリシー" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Политика конфиденциальности" } }
+      }
+    },
+    "Pro" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Pro" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Pro" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Pro" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "Pro" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Pro" } }
+      }
+    },
+    "Rescan" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Erneut scannen" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Rescan" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Re-scanner" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "再スキャン" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Сканировать снова" } }
+      }
+    },
+    "Scan failed" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Scan fehlgeschlagen" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Scan failed" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Échec du scan" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "スキャンに失敗しました" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Сканирование не удалось" } }
+      }
+    },
+    "Scanned %lld items" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "%lld Elemente analysiert" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Scanned %lld items" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "%lld éléments analysés" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "%lld 件をスキャン" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Просканировано %lld шт." } }
+      }
+    },
+    "Screenshots" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Screenshots" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Screenshots" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Captures d’écran" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "スクリーンショット" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Скриншоты" } }
+      }
+    },
+    "Select all" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Alle auswählen" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Select all" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Tout sélectionner" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "すべて選択" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Выбрать всё" } }
+      }
+    },
+    "Settings" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Einstellungen" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Settings" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Réglages" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "設定" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Настройки" } }
+      }
+    },
+    "Similar" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Ähnlich" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Similar" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Similaire" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "類似" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Похожие" } }
+      }
+    },
+    "Support" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Support" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Support" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Assistance" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "サポート" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Поддержка" } }
+      }
+    },
+    "Sweep" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Sweep" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Sweep" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Sweep" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "Sweep" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Sweep" } }
+      }
+    },
+    "Sweep can only see the photos you picked. Switch to Full Access to scan everything." : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Sweep sieht nur die ausgewählten Fotos. Wechsle zu Vollzugriff, um alles zu scannen." } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Sweep can only see the photos you picked. Switch to Full Access to scan everything." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Sweep ne voit que les photos sélectionnées. Passe en Accès complet pour tout scanner." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "選択した写真しか見えません。すべてをスキャンするには「フルアクセス」に切り替えてください。" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Sweep видит только выбранные фото. Переключись на Полный доступ, чтобы сканировать всё." } }
+      }
+    },
+    "Sweep needs full photo access" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Sweep braucht vollen Fotozugriff" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Sweep needs full photo access" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Sweep a besoin de l’accès complet aux photos" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "Sweep には写真のフルアクセスが必要です" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Sweep нужен полный доступ к фото" } }
+      }
+    },
+    "Sweep only suggests photos to delete. You confirm every action." : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Sweep schlägt nur Fotos zum Löschen vor. Du bestätigst jede Aktion." } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Sweep only suggests photos to delete. You confirm every action." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Sweep propose les photos à supprimer. Tu valides chaque action." } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "Sweep は削除候補を提案するだけ。実際の削除はあなたが確認します。" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Sweep только предлагает фото к удалению. Каждое действие подтверждаешь ты." } }
+      }
+    },
+    "Version" : {
+      "localizations" : {
+        "de" : { "stringUnit" : { "state" : "translated", "value" : "Version" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Version" } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Version" } },
+        "ja" : { "stringUnit" : { "state" : "translated", "value" : "バージョン" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Версия" } }
+      }
+    }
+  }
+}
