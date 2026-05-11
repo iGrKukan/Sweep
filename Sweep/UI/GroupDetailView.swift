@@ -4,11 +4,13 @@ import SwiftUI
 struct GroupDetailView: View {
     let group: PhotoGroup
 
+    @Environment(PurchaseManager.self) private var purchases
     /// Items in the group that are still present (i.e., not already deleted).
     @State private var visibleItems: [PhotoSummary]
     @State private var selectedIDs: Set<String>
     @State private var isDeleting = false
     @State private var errorMessage: String?
+    @State private var showingPaywall = false
 
     init(group: PhotoGroup) {
         self.group = group
@@ -44,6 +46,7 @@ struct GroupDetailView: View {
         } message: {
             Text(errorMessage ?? "")
         }
+        .sheet(isPresented: $showingPaywall) { PaywallView() }
     }
 
     private var deleteBar: some View {
@@ -84,6 +87,10 @@ struct GroupDetailView: View {
     private func delete() async {
         let idsToDelete = Array(selectedIDs)
         guard !idsToDelete.isEmpty else { return }
+        if !purchases.isPro && !FreeQuota.shared.canDelete(idsToDelete.count) {
+            showingPaywall = true
+            return
+        }
         isDeleting = true
         defer { isDeleting = false }
 
@@ -92,6 +99,7 @@ struct GroupDetailView: View {
             try await PHPhotoLibrary.shared().performChanges {
                 PHAssetChangeRequest.deleteAssets(fetch)
             }
+            if !purchases.isPro { FreeQuota.shared.record(idsToDelete.count) }
             visibleItems.removeAll { idsToDelete.contains($0.id) }
             selectedIDs.removeAll()
         } catch {

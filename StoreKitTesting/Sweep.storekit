@@ -1,0 +1,31 @@
+{
+  "identifier" : "B0F8E0E4-SWEEP-TESTING",
+  "nonRenewingSubscriptions" : [],
+  "products" : [
+    {
+      "displayPrice" : "9.99",
+      "familyShareable" : false,
+      "internalID" : "PROLIFETIME",
+      "localizations" : [
+        {
+          "description" : "Unlimited deletion + smart suggestions, forever.",
+          "displayName" : "Sweep Pro",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "by.timberbid.sweep.pro.lifetime",
+      "referenceName" : "Sweep Pro Lifetime",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "0",
+    "_compatibilityTimeRate" : 1,
+    "_developerTeamID" : "U5BAN54DL2"
+  },
+  "subscriptionGroups" : [],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

@@ -5,10 +5,12 @@ struct PhotoListView: View {
     let title: LocalizedStringKey
     let items: [PhotoSummary]
 
+    @Environment(PurchaseManager.self) private var purchases
     @State private var visibleItems: [PhotoSummary]
     @State private var selectedIDs: Set<String> = []
     @State private var isDeleting = false
     @State private var errorMessage: String?
+    @State private var showingPaywall = false
 
     init(title: LocalizedStringKey, items: [PhotoSummary]) {
         self.title = title
@@ -45,6 +47,7 @@ struct PhotoListView: View {
         } message: {
             Text(errorMessage ?? "")
         }
+        .sheet(isPresented: $showingPaywall) { PaywallView() }
     }
 
     private var deleteBar: some View {
@@ -90,6 +93,10 @@ struct PhotoListView: View {
     private func delete() async {
         let ids = Array(selectedIDs)
         guard !ids.isEmpty else { return }
+        if !purchases.isPro && !FreeQuota.shared.canDelete(ids.count) {
+            showingPaywall = true
+            return
+        }
         isDeleting = true
         defer { isDeleting = false }
 
@@ -98,6 +105,7 @@ struct PhotoListView: View {
             try await PHPhotoLibrary.shared().performChanges {
                 PHAssetChangeRequest.deleteAssets(fetch)
             }
+            if !purchases.isPro { FreeQuota.shared.record(ids.count) }
             visibleItems.removeAll { ids.contains($0.id) }
             selectedIDs.removeAll()
         } catch {

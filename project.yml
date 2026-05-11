@@ -79,6 +79,8 @@ schemes:
       targets:
         Sweep: all
         SweepUITests: [test]
+    run:
+      storeKitConfiguration: StoreKitTesting/Sweep.storekit
     test:
       targets:
         - SweepUITests
