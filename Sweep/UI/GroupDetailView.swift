@@ -95,10 +95,7 @@ struct GroupDetailView: View {
         defer { isDeleting = false }
 
         do {
-            try await PHPhotoLibrary.shared().performChanges {
-                let fetch = PHAsset.fetchAssets(withLocalIdentifiers: idsToDelete, options: nil)
-                PHAssetChangeRequest.deleteAssets(fetch)
-            }
+            try await AssetDeleter.deleteAssets(localIdentifiers: idsToDelete)
             if !purchases.isPro { FreeQuota.shared.record(idsToDelete.count) }
             visibleItems.removeAll { idsToDelete.contains($0.id) }
             selectedIDs.removeAll()

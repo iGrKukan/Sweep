@@ -101,10 +101,7 @@ struct PhotoListView: View {
         defer { isDeleting = false }
 
         do {
-            try await PHPhotoLibrary.shared().performChanges {
-                let fetch = PHAsset.fetchAssets(withLocalIdentifiers: ids, options: nil)
-                PHAssetChangeRequest.deleteAssets(fetch)
-            }
+            try await AssetDeleter.deleteAssets(localIdentifiers: ids)
             if !purchases.isPro { FreeQuota.shared.record(ids.count) }
             visibleItems.removeAll { ids.contains($0.id) }
             selectedIDs.removeAll()
