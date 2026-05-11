@@ -48,6 +48,10 @@ struct GroupDetailView: View {
             Text(errorMessage ?? "")
         }
         .sheet(isPresented: $showingPaywall) { PaywallView() }
+        .overlay {
+            if isDeleting { DeleteOverlay(count: selectedIDs.count) }
+        }
+        .animation(.default, value: isDeleting)
     }
 
     private var deleteBar: some View {
@@ -96,7 +100,8 @@ struct GroupDetailView: View {
         defer { isDeleting = false }
 
         do {
-            try await AssetDeleter.deleteAssets(localIdentifiers: idsToDelete)
+            let deleted = try await AssetDeleter.deleteAssets(localIdentifiers: idsToDelete)
+            guard deleted else { return }   // user tapped Cancel in system dialog
             if !purchases.isPro { FreeQuota.shared.record(idsToDelete.count) }
             visibleItems.removeAll { idsToDelete.contains($0.id) }
             selectedIDs.removeAll()

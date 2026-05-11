@@ -18,6 +18,7 @@
 		30DA03D7E3FBBC09AE2EE1FC /* PerceptualHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABF532EE7AB9D172A9E7A3D /* PerceptualHash.swift */; };
 		37460F41B3AB69090ABE7408 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D17DAEF4D16589564DC95E8B /* Localizable.xcstrings */; };
 		4753F3409C2ABE40FBB3FE36 /* PhotoAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56B6F1A85349A28085CCD2A /* PhotoAuthorization.swift */; };
+		5809720376C4A5FCD4AB6BA1 /* DeleteOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D693F1AB6E516225CC4B72 /* DeleteOverlay.swift */; };
 		6071877B64C6BB86C228FFD9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D717C7D31731C889DF0CA489 /* Models.swift */; };
 		71ABB42E2675E4290DA47293 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB8A495194CF3235BD6B7BD /* SettingsView.swift */; };
 		967C4B9348B1F8481FF2AB20 /* ThumbnailLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B382710E89370FA8D327F215 /* ThumbnailLoader.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		07448343B70F1A711FE7C981 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		15D693F1AB6E516225CC4B72 /* DeleteOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteOverlay.swift; sourceTree = "<group>"; };
 		1E715F02C8E5279E2C7A6E15 /* Sweep.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Sweep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2905691C65C6F38771E28B7C /* ScanProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanProgressView.swift; sourceTree = "<group>"; };
 		2ABF532EE7AB9D172A9E7A3D /* PerceptualHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerceptualHash.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		A8C5B06BE5D2C0FE4142D52B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				15D693F1AB6E516225CC4B72 /* DeleteOverlay.swift */,
 				BF52624413BF158E229C0B6A /* GroupDetailView.swift */,
 				4EEB1DDF5D76AD3BC393D1BF /* GroupListView.swift */,
 				5DA35470015B5B395D0E0DA7 /* HomeView.swift */,
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE441E4342927B6F4ED0232 /* AssetDeleter.swift in Sources */,
+				5809720376C4A5FCD4AB6BA1 /* DeleteOverlay.swift in Sources */,
 				287E8257877573DE4DD16629 /* GroupDetailView.swift in Sources */,
 				292E6C0167D198B26A801B92 /* GroupListView.swift in Sources */,
 				9870C83D51D9D26539FBC12A /* HomeView.swift in Sources */,

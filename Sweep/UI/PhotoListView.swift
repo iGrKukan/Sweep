@@ -49,6 +49,10 @@ struct PhotoListView: View {
             Text(errorMessage ?? "")
         }
         .sheet(isPresented: $showingPaywall) { PaywallView() }
+        .overlay {
+            if isDeleting { DeleteOverlay(count: selectedIDs.count) }
+        }
+        .animation(.default, value: isDeleting)
     }
 
     private var deleteBar: some View {
@@ -102,7 +106,8 @@ struct PhotoListView: View {
         defer { isDeleting = false }
 
         do {
-            try await AssetDeleter.deleteAssets(localIdentifiers: ids)
+            let deleted = try await AssetDeleter.deleteAssets(localIdentifiers: ids)
+            guard deleted else { return }   // user tapped Cancel in system dialog
             if !purchases.isPro { FreeQuota.shared.record(ids.count) }
             visibleItems.removeAll { ids.contains($0.id) }
             selectedIDs.removeAll()
