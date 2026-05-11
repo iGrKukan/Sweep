@@ -8,7 +8,14 @@ final class PurchaseManager {
     static let proLifetimeID = "by.timberbid.sweep.pro.lifetime"
 
     private(set) var proProduct: Product?
+    #if DEBUG
+    /// Debug builds bypass StoreKit and treat the user as Pro by default —
+    /// no paywall, no free-quota gate. Production (Release) builds still
+    /// require a real purchase via `buy()`.
+    private(set) var isPro: Bool = true
+    #else
     private(set) var isPro: Bool = false
+    #endif
     private(set) var isLoading: Bool = false
     var lastError: String?
 
@@ -39,6 +46,11 @@ final class PurchaseManager {
     }
 
     func refreshEntitlements() async {
+        #if DEBUG
+        // Keep the dev override; don't reset isPro just because StoreKit
+        // sandbox has no transactions.
+        return
+        #else
         for await result in Transaction.currentEntitlements {
             if case let .verified(t) = result, t.productID == Self.proLifetimeID, t.revocationDate == nil {
                 isPro = true
@@ -46,6 +58,7 @@ final class PurchaseManager {
             }
         }
         isPro = false
+        #endif
     }
 
     /// Returns true if a transaction was completed (verified) — caller can dismiss the paywall.
