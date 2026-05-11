@@ -5,6 +5,7 @@ struct GroupDetailView: View {
     let group: PhotoGroup
 
     @Environment(PurchaseManager.self) private var purchases
+    @Environment(ScanCoordinator.self) private var scan
     /// Items in the group that are still present (i.e., not already deleted).
     @State private var visibleItems: [PhotoSummary]
     @State private var selectedIDs: Set<String>
@@ -99,6 +100,7 @@ struct GroupDetailView: View {
             if !purchases.isPro { FreeQuota.shared.record(idsToDelete.count) }
             visibleItems.removeAll { idsToDelete.contains($0.id) }
             selectedIDs.removeAll()
+            scan.acknowledgeDeletions(Set(idsToDelete))
         } catch {
             errorMessage = error.localizedDescription
         }

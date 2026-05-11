@@ -48,6 +48,14 @@ final class ScanCoordinator {
         }
     }
 
+    /// Drop the given local-identifiers from every category of the current
+    /// report. Called after the user confirms a deletion in the system
+    /// dialog so HomeView counters update without a full rescan.
+    func acknowledgeDeletions(_ ids: Set<String>) {
+        guard case let .complete(report) = state else { return }
+        state = .complete(report.removing(ids: ids))
+    }
+
     private func setStage(_ stage: String, progress: Double) async {
         await MainActor.run { self.state = .scanning(progress: progress, stage: stage) }
     }

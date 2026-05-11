@@ -6,6 +6,7 @@ struct PhotoListView: View {
     let items: [PhotoSummary]
 
     @Environment(PurchaseManager.self) private var purchases
+    @Environment(ScanCoordinator.self) private var scan
     @State private var visibleItems: [PhotoSummary]
     @State private var selectedIDs: Set<String> = []
     @State private var isDeleting = false
@@ -105,6 +106,7 @@ struct PhotoListView: View {
             if !purchases.isPro { FreeQuota.shared.record(ids.count) }
             visibleItems.removeAll { ids.contains($0.id) }
             selectedIDs.removeAll()
+            scan.acknowledgeDeletions(Set(ids))
         } catch {
             errorMessage = error.localizedDescription
         }

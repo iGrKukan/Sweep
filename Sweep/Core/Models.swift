@@ -72,4 +72,25 @@ struct ScanReport: Sendable {
         let shotsBytes = screenshots.reduce(0) { $0 + $1.estimatedFileSize }
         return dups + burstsBytes + blurryBytes + shotsBytes
     }
+
+    /// Drop items whose local-identifier is in `ids` from every category.
+    /// Groups that collapse to one item are removed entirely (a "group of 1"
+    /// is no longer a duplicate).
+    func removing(ids: Set<String>) -> ScanReport {
+        func filterGroups(_ groups: [PhotoGroup]) -> [PhotoGroup] {
+            groups.compactMap { group in
+                let kept = group.items.filter { !ids.contains($0.id) }
+                guard kept.count >= 2 else { return nil }
+                return PhotoGroup(kind: group.kind, items: kept)
+            }
+        }
+        return ScanReport(
+            duplicates: filterGroups(duplicates),
+            screenshots: screenshots.filter { !ids.contains($0.id) },
+            blurry: blurry.filter { !ids.contains($0.id) },
+            bursts: filterGroups(bursts),
+            largeMedia: largeMedia.filter { !ids.contains($0.id) },
+            totalLibraryCount: max(0, totalLibraryCount - ids.count)
+        )
+    }
 }
